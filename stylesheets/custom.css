@@ -1,0 +1,23 @@
+.clickable {
+   cursor: pointer;
+}
+
+.panel {
+  border-color: #ec7d1f;
+}
+
+.panel-heading {
+  background-image: none;
+  background-color: #ec7d1f;
+  color: #22123a;
+}
+
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover {
+    text-decoration: none;
+    background-color: #ec7d1f;
+}
+
+.nav-pills>li>a {
+  text-decoration: none;
+  color: #22123a;
+}
