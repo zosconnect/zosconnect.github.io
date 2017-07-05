@@ -3,6 +3,15 @@
 */
 /*/ Variables /*/
 /*/ Style Reset /*/
+html, body, div, main, nav, aside, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  text-decoration: none;
+}
+
 /*/ Old Classes /*/
 .clickable {
   cursor: pointer;
@@ -29,6 +38,27 @@
 }
 
 /*/ New Classes /*/
+html {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+#body-text {
+  font-family: "IBMPlexSans-text";
+}
+
+#zcee-logo {
+  width: 40px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+#zcee-title {
+  display: inline-block;
+}
+
 .test {
   background-color: #DEDEDE;
   color: #202020;
