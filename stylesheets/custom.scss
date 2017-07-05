@@ -1,11 +1,19 @@
 /* TODO:
 
 */
+
 /*/ Variables /*/
+
+$red: #FF0000;
+
+
 /*/ Style Reset /*/
+
+
 /*/ Old Classes /*/
+
 .clickable {
-  cursor: pointer;
+   cursor: pointer;
 }
 
 .panel {
@@ -18,18 +26,19 @@
   color: #22123a;
 }
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover {
-  text-decoration: none;
-  background-color: #ec7d1f;
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover {
+    text-decoration: none;
+    background-color: #ec7d1f;
 }
 
-.nav-pills > li > a {
+.nav-pills>li>a {
   text-decoration: none;
   color: #22123a;
 }
 
 /*/ New Classes /*/
-.test {
+
+.test{
   background-color: #DEDEDE;
   color: #202020;
   padding-top: 10px;
