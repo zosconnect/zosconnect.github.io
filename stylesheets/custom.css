@@ -110,6 +110,31 @@ html {
   /*TODO: Add in the anchor to the bototm of the page */
 }
 
+.find-out-button {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 40px;
+}
+
+@media (max-width: 767px) {
+  .find-out-button {
+    margin-bottom: 40px;
+  }
+}
+
+.find-out-image {
+  width: 80%;
+  margin: 0 auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  .find-out-image {
+    width: 260px;
+  }
+}
+
 #link-clear {
   text-decoration: none;
   color: #333;
@@ -137,6 +162,7 @@ html {
 #section-title {
   text-align: center;
   margin-bottom: 40px;
+  font-size: 20px;
 }
 
 /* SVG Classes */
@@ -163,7 +189,13 @@ html {
 
 .ibm-footer {
   text-align: center;
-  margin-top: 30px;
+  margin-top: 60px;
+}
+
+@media (max-width: 767px) {
+  .ibm-footer {
+    margin-top: 10px;
+  }
 }
 
 .test {
