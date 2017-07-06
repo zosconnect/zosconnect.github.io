@@ -20,11 +20,14 @@ jQuery.fn.loadRepositories = function(username) {
                var repo = this;
                var column = $('<div class="col-md-4 col-sm-6">');
                var panel = $('<div class="panel clickable">');
+               var heading = $('<div class="panel-heading">');
                column.append(panel);
-               panel.append($('<div class="panel-heading">')
-                  .append($('<h3 class="panel-title">')
-                  .append($('<a href="'+this.html_url+'" target="_blank">')
-                  .append(this.name))));
+               panel.append(heading);
+                  heading.append($('<div class="panel-image">')
+                  .append($('<img src="imgs/repo-box.svg"/>')));
+                  heading.append($('<h3 class="panel-title">')
+                  .append($('<a class="no-style" href="'+this.html_url+'" target="_blank">')
+                  .append(this.name)));
                panel.append($('<div class="panel-body">').append(this.description));
                $(panel).click(function(e){
                   e.preventDefault();
