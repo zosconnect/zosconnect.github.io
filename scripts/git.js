@@ -18,12 +18,12 @@ jQuery.fn.loadRepositories = function(username) {
             var row = $('<div class="row">');
             $.each(this, function() {
                var repo = this;
-               var column = $('<div class="col-md-4">');
+               var column = $('<div class="col-md-4 col-sm-6">');
                var panel = $('<div class="panel clickable">');
                column.append(panel);
                panel.append($('<div class="panel-heading">')
                   .append($('<h3 class="panel-title">')
-                  .append($('<a href="'+this.html_url+'">')
+                  .append($('<a href="'+this.html_url+'" target="_blank">')
                   .append(this.name))));
                panel.append($('<div class="panel-body">').append(this.description));
                $(panel).click(function(e){

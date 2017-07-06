@@ -1,7 +1,6 @@
 /* TODO:
 
 */
-/*/ Variables /*/
 /*/ Style Reset /*/
 html, body, div, main, nav, aside, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
   margin: 0px;
@@ -12,37 +11,24 @@ a {
   text-decoration: none;
 }
 
-/*/ Old Classes /*/
+/*/ Page Classes /*/
 .clickable {
   cursor: pointer;
 }
 
 .panel {
-  border-color: #FF0000;
+  background: #ffffff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
 }
 
 .panel-heading {
   background-image: none;
-  background-color: #FF0000;
-  color: #22123a;
 }
 
-.nav-pills > li.active > a, .nav-pills > li.active > a:hover {
-  text-decoration: none;
-  background-color: #ec7d1f;
-}
-
-.nav-pills > li > a {
-  text-decoration: none;
-  color: #22123a;
-}
-
-/*/ New Classes /*/
 html {
   padding-top: 60px;
   padding-bottom: 60px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 
 #body-text {
@@ -53,18 +39,136 @@ html {
   width: 40px;
   display: inline-block;
   margin-right: 10px;
+  vertical-align: middle;
+}
+
+@media (max-width: 767px) {
+  #zcee-logo {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
 }
 
 #zcee-title {
   display: inline-block;
 }
 
+@media (max-width: 767px) {
+  #zcee-title {
+    display: block;
+    text-align: center;
+  }
+}
+
+.center-header {
+  padding-top: 80px;
+}
+
+@media (max-width: 767px) {
+  .center-header {
+    padding-top: 0px;
+  }
+}
+
+.welcome-header {
+  margin-top: 30px;
+}
+
+@media (max-width: 767px) {
+  .welcome-header {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.zcee-button {
+  border: 1px solid #d0d0d0;
+  border-radius: 100px;
+  padding: 10px 20px;
+  margin-top: 30px;
+  width: 175px;
+  text-align: center;
+}
+
+@media (max-width: 767px) {
+  .zcee-button {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+.zcee-button:hover {
+  background: #fe8500;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+  -webkit-transition: 0.5s;
+  /* Safari */
+  transition: 0.5s;
+  cursor: pointer;
+  /*TODO: Add in the anchor to the bototm of the page */
+}
+
+#link-clear {
+  text-decoration: none;
+  color: #333;
+}
+
+.welcome-description {
+  margin-top: 30px;
+  width: 85%;
+}
+
+@media (max-width: 767px) {
+  .welcome-description {
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+.section-space {
+  margin-top: 60px;
+}
+
+#section-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* SVG Classes */
+#svg-container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+@media (max-width: 767px) {
+  #svg-container {
+    display: none;
+  }
+}
+
+#zcee-picture {
+  width: 580px;
+  display: block;
+  margin: 0 auto;
+}
+
+.base-shadow {
+  display: block;
+}
+
+.ibm-footer {
+  text-align: center;
+  margin-top: 30px;
+}
+
 .test {
-  background-color: #DEDEDE;
-  color: #202020;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border: 1px solid #D0D0D0;
+  border: 1px solid #D2D2D2;
+  background-color: #EBEBEB;
+  text-align: center;
+  padding: 20px;
 }
