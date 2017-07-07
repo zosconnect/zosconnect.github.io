@@ -15,7 +15,7 @@ jQuery.fn.loadRepositories = function(username) {
          sortByName(repos);
          var chunkedRepos = chunk(repos, 3);
          $(chunkedRepos).each(function() {
-            var row = $('<div class="row">');
+            var row = $('<div class="row-eq-height">');
             $.each(this, function() {
                var repo = this;
                var column = $('<div class="col-md-4 col-sm-6">');
@@ -25,9 +25,10 @@ jQuery.fn.loadRepositories = function(username) {
                panel.append(heading);
                   heading.append($('<div class="panel-image">')
                   .append($('<img src="imgs/repo-box.svg"/>')));
-                  heading.append($('<h3 class="panel-title">')
+                  heading.append($('<div class="panel-title">')
                   .append($('<a class="no-style" href="'+this.html_url+'" target="_blank">')
-                  .append(this.name)));
+                  .append($('<h3 class="panel-title-name">')
+                  .append(this.name))));
                panel.append($('<div class="panel-body">').append(this.description));
                $(panel).click(function(e){
                   e.preventDefault();

@@ -1,3 +1,39 @@
+/*/ Font declarations /*/
+@font-face {
+  font-family: "ibm-plex-sans";
+  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ibm-plex-sans";
+  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regular.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ibm-plex-sans";
+  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-medium.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ibm-plex-sans";
+  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibold.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibold.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "ibm-plex-sans";
+  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-bold.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
 /*/ Style Reset /*/
 html, body, div, main, nav, aside, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
   margin: 0px;
@@ -46,10 +82,20 @@ a {
   display: inline-block;
 }
 
+.panel-title-name {
+  font-size: 16px;
+  margin-left: 30px;
+}
+
 .panel-image {
   width: 20px;
   display: inline-block;
   margin-right: 10px;
+  position: absolute;
+}
+
+.panel-body {
+  font-size: 16px;
 }
 
 html {
@@ -58,7 +104,7 @@ html {
 }
 
 #body-text {
-  font-family: "IBMPlexSans-text";
+  font-family: "ibm-plex-sans";
 }
 
 #zcee-logo {
@@ -114,6 +160,7 @@ html {
   padding: 10px 20px;
   margin-top: 30px;
   width: 175px;
+  font-size: 16px;
   text-align: center;
 }
 
@@ -133,7 +180,6 @@ html {
   /* Safari */
   transition: 0.5s;
   cursor: pointer;
-  /*TODO: Add in the anchor to the bototm of the page */
 }
 
 .find-out-button {
@@ -146,6 +192,7 @@ html {
 @media (max-width: 767px) {
   .find-out-button {
     margin-bottom: 40px;
+    font-size: 16px;
   }
 }
 
@@ -168,6 +215,7 @@ html {
 
 .welcome-description {
   margin-top: 30px;
+  font-size: 16px;
   width: 85%;
 }
 
@@ -229,4 +277,24 @@ html {
   background-color: #EBEBEB;
   text-align: center;
   padding: 20px;
+}
+
+/* SVG Animation */
+.float-zcee {
+  animation: 1.5s float alternate infinite;
+}
+
+@media (max-width: 991px) {
+  .float-zcee {
+    animation: none;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(7px);
+  }
 }

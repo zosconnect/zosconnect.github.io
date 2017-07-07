@@ -1,3 +1,6 @@
+/*/ Font declarations /*/
+@import 'ibm_plex_fonts';
+
 /*/ Style Reset /*/
 html, body, div, main, nav, aside, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a{
     margin: 0px;
@@ -7,8 +10,6 @@ html, body, div, main, nav, aside, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a{
 a {
   text-decoration: none;
 }
-
-
 
 /*/ Page Classes /*/
 
@@ -51,14 +52,20 @@ a {
   display: inline-block;
 }
 
+.panel-title-name{
+    font-size: 16px;
+    margin-left: 30px;
+}
+
 .panel-image{
   width: 20px;
   display: inline-block;
   margin-right: 10px;
+  position: absolute;
 }
 
 .panel-body{
-
+  font-size:16px;
 }
 
 html{
@@ -69,7 +76,7 @@ html{
 }
 
 #body-text{
-  font-family: "IBMPlexSans-text";
+  font-family: "ibm-plex-sans";
 }
 
 #zcee-logo{
@@ -113,6 +120,7 @@ html{
   padding: 10px 20px;
   margin-top: 30px;
   width:175px;
+  font-size:16px;
   text-align: center;
   @media (max-width: 767px) {
     display: block;
@@ -127,7 +135,6 @@ html{
     -webkit-transition: 0.5s; /* Safari */
     transition: 0.5s;
     cursor: pointer;
-    /*TODO: Add in the anchor to the bototm of the page */
   }
 
 }
@@ -139,6 +146,7 @@ html{
   margin-top: 40px;
   @media (max-width: 767px) {
   margin-bottom: 40px;
+  font-size:16px;
   }
 }
 
@@ -158,6 +166,7 @@ html{
 
 .welcome-description{
   margin-top: 30px;
+  font-size:16px;
   width: 85%;
   @media (max-width: 767px) {
     width: 80%;
@@ -212,4 +221,22 @@ html{
   background-color: #EBEBEB;
   text-align: center;
   padding: 20px;
+}
+
+/* SVG Animation */
+
+.float-zcee {
+  animation: 1.5s float alternate infinite;
+  @media (max-width: 991px) {
+  animation: none;
+  }
+}
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+
+  100% {
+    transform: translateY(7px);
+  }
 }
