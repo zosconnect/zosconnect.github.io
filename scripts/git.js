@@ -30,10 +30,12 @@ jQuery.fn.loadRepositories = function(username) {
                   .append($('<h3 class="panel-title-name">')
                   .append(this.name))));
                panel.append($('<div class="panel-body">').append(this.description));
-              //  $(panel).click(function(e){
-              //     // e.preventDefault();
-              //     e.window.location=repo.html_url;
-              //  });
+
+               $(panel).click(function(e){
+                  e.preventDefault();
+                  window.open(repo.html_url);
+               });
+
                row.append(column);
             });
             target.append(row);
