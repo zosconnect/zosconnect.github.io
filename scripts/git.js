@@ -3,7 +3,7 @@ jQuery.githubUser = function(username, callback) {
 };
 
 jQuery.fn.loadRepositories = function(username) {
-   this.html("<span>Querying GitHub for " + username +"'s repositories...</span>");
+   this.html("<div class='query-class'><span>Querying GitHub for " + username +"'s repositories...</span></div>");
 
    var target = this;
    $.githubUser(username, function(data) {
@@ -30,20 +30,20 @@ jQuery.fn.loadRepositories = function(username) {
                   .append($('<h3 class="panel-title-name">')
                   .append(this.name))));
                panel.append($('<div class="panel-body">').append(this.description));
-               $(panel).click(function(e){
-                  e.preventDefault();
-                  window.location=repo.html_url;
-               });
+              //  $(panel).click(function(e){
+              //     // e.preventDefault();
+              //     e.window.location=repo.html_url;
+              //  });
                row.append(column);
             });
             target.append(row);
          });
       } else {
-         target.append($('<div class="alert alert-warning">')
-            .append($('<p>')
-            .append('Unable to retrieve repositories. Please click ')
+         target.append($('<div class="alert alert-danger alert-box">')
+            .append($('<p class="alert-text">')
+            .append('Unable to retrieve repositories. <b>Please click ')
             .append($('<a href="http://github.com/zosconnect">')
-            .append('here.'))));
+            .append('here.</b>'))));
       }
    });
 

@@ -41,6 +41,24 @@ a {
 
 }
 
+.alert-text{
+  text-align: center;
+}
+
+.alert-box{
+  margin: 0 auto;
+  display: block;
+  padding: 20px 0;
+  width: 80%;
+  @media (max-width: 540px) {
+  width: 100%;
+  }
+}
+
+.query-class{
+  text-align: center;
+}
+
 .panel-heading {
   background-image: none;
   padding: 10px;
