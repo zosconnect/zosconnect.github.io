@@ -1,321 +1,425 @@
-/*/ Font declarations /*/
+/***** Font declarations *****/
 @font-face {
-  font-family: "ibm-plex-sans";
-  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
+    font-family: "ibm-plex-sans";
+    src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "ibm-plex-sans";
-  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regular.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
+    font-family: "ibm-plex-sans";
+    src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regular.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "ibm-plex-sans";
-  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-medium.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
+    font-family: "ibm-plex-sans";
+    src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-medium.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "ibm-plex-sans";
-  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibold.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
+    font-family: "ibm-plex-sans";
+    src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibold.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "ibm-plex-sans";
-  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-bold.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
+    font-family: "ibm-plex-sans";
+    src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-bold.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
 }
 
-/*/ Style Reset /*/
-html, body, div, main, nav, aside, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
-  margin: 0px;
-  padding: 0px;
+/***** Style reset *****/
+html,
+body,
+div,
+main,
+nav,
+aside,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+a {
+    margin: 0px;
+    padding: 0px;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
+
+/* 2022 styles */
+
+/***** Global styles *****/
+html {
+    font-size: 62.5%; /* set gloabl rem + em to be 1rem = 10px */
+    margin: 0 auto;
+}
+
+.page-container {
+    margin: 0 auto;
+    width: 96rem;
+}
+
+/***** Banner section *****/
+
+.banner-section {
+    display: flex;
+    align-items: center;
+    padding: 9.6rem 0;
+}
+
+.banner-section__information-container {
+    width: 50%;
+    font-size: 1.6rem;
+}
+
+.banner-section__image-container {
+    width: 50%;
+}
+
+.banner-section__image {
+    width: 100%;
+}
+
+.banner-section__logo {
+    width: 4.8rem;
+    height: 4.8rem;
+}
+
+.banner-section__logo-container {
+    margin-bottom: 1.6rem;
+}
+
+.banner-section__logo-container p {
+    font-size: 2rem;
+}
+
+.banner-section__logo-container span {
+    font-weight: 600;
+}
+
+.banner-section__tagline {
+    font-size: 2.6rem;
+    line-height: 2.6rem;
+    margin-bottom: 1.6rem;
+}
+
+.banner-section__copy {
+    margin-bottom: 1.6rem;
+}
+
+.banner-section__copy-text {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+.banner-section__copy-text:not(:last-child) {
+    margin-bottom: .8rem;
+}
+
+.banner-section__button {
+    font-size: 1.4rem;
+}
+
+/* banner section media queries */
+@media only screen and (max-width: 9.6rem) { 
+    
+};
+
+
+
+/***** Repositories section *****/
+
+/***** Designer section *****/
+
+/***** find out section *****/
+
+/***** Footer section *****/
+
+
+
 
 /*/ Page Classes /*/
 .clickable {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .panel {
-  background: #ffffff;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 10px;
-  height: 250px;
+    background: #ffffff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    padding: 10px;
+    height: 250px;
 }
 
 .panel:hover {
-  box-shadow: 0 5px 8px 3px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.5s;
-  /* Safari */
-  transition: 0.5s;
+    box-shadow: 0 5px 8px 3px rgba(0, 0, 0, 0.2);
+    -webkit-transition: 0.5s;
+    /* Safari */
+    transition: 0.5s;
 }
 
 .no-style {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .no-style:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .alert-text {
-  text-align: center;
+    text-align: center;
 }
 
 .alert-box {
-  margin: 0 auto;
-  display: block;
-  padding: 20px 0;
-  width: 80%;
+    margin: 0 auto;
+    display: block;
+    padding: 20px 0;
+    width: 80%;
 }
 
 @media (max-width: 540px) {
-  .alert-box {
-    width: 100%;
-  }
+    .alert-box {
+        width: 100%;
+    }
 }
 
 .query-class {
-  text-align: center;
+    text-align: center;
 }
 
 .panel-heading {
-  background-image: none;
-  padding: 10px;
+    background-image: none;
+    padding: 10px;
 }
 
 .panel-title {
-  text-decoration: none;
-  display: inline-block;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .panel-title-name {
-  font-size: 16px;
-  margin-left: 30px;
+    font-size: 16px;
+    margin-left: 30px;
 }
 
 .panel-image {
-  width: 20px;
-  display: inline-block;
-  margin-right: 10px;
-  position: absolute;
+    width: 20px;
+    display: inline-block;
+    margin-right: 10px;
+    position: absolute;
 }
 
 .panel-body {
-  font-size: 16px;
-}
-
-html {
-  padding-top: 60px;
-  padding-bottom: 60px;
+    font-size: 16px;
 }
 
 #body-text {
-  font-family: "ibm-plex-sans";
+    font-family: "ibm-plex-sans";
 }
 
 #zcee-logo {
-  width: 40px;
-  display: inline-block;
-  margin-right: 10px;
-  vertical-align: middle;
+    width: 40px;
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: middle;
 }
 
 @media (max-width: 767px) {
-  #zcee-logo {
-    display: block;
-    margin: 0 auto;
-    margin-bottom: 10px;
-  }
+    #zcee-logo {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
 }
 
 #zcee-title {
-  display: inline-block;
+    display: inline-block;
 }
 
 @media (max-width: 767px) {
-  #zcee-title {
-    display: block;
-    text-align: center;
-  }
+    #zcee-title {
+        display: block;
+        text-align: center;
+    }
 }
 
 .center-header {
-  padding-top: 80px;
+    padding-top: 80px;
 }
 
 @media (max-width: 767px) {
-  .center-header {
-    padding-top: 0px;
-  }
+    .center-header {
+        padding-top: 0px;
+    }
 }
 
 .welcome-header {
-  margin-top: 30px;
+    margin-top: 30px;
 }
 
 @media (max-width: 767px) {
-  .welcome-header {
-    width: 100%;
-    text-align: center;
-  }
+    .welcome-header {
+        width: 100%;
+        text-align: center;
+    }
 }
 
 .zcee-button {
-  border: 1px solid #d0d0d0;
-  border-radius: 100px;
-  padding: 10px 20px;
-  margin-top: 30px;
-  width: 175px;
-  font-size: 16px;
-  text-align: center;
+    border: 1px solid #d0d0d0;
+    border-radius: 100px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    width: 175px;
+    font-size: 16px;
+    text-align: center;
 }
 
 @media (max-width: 767px) {
-  .zcee-button {
-    display: block;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 30px;
-  }
+    .zcee-button {
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        margin-top: 30px;
+    }
 }
 
 .zcee-button:hover {
-  background: #fe8500;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  -webkit-transition: 0.5s;
-  /* Safari */
-  transition: 0.5s;
-  cursor: pointer;
+    background: #fe8500;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    -webkit-transition: 0.5s;
+    /* Safari */
+    transition: 0.5s;
+    cursor: pointer;
 }
 
 .find-out-button {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 40px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 40px;
 }
 
 @media (max-width: 767px) {
-  .find-out-button {
-    margin-bottom: 40px;
-    font-size: 16px;
-  }
+    .find-out-button {
+        margin-bottom: 40px;
+        font-size: 16px;
+    }
 }
 
 .find-out-image {
-  width: 80%;
-  margin: 0 auto;
-  display: block;
-}
-
-@media (max-width: 767px) {
-  .find-out-image {
-    width: 260px;
-  }
-}
-
-#link-clear {
-  text-decoration: none;
-  color: #333;
-}
-
-.welcome-description {
-  margin-top: 30px;
-  font-size: 16px;
-  width: 85%;
-}
-
-@media (max-width: 767px) {
-  .welcome-description {
     width: 80%;
     margin: 0 auto;
     display: block;
-    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .find-out-image {
+        width: 260px;
+    }
+}
+
+#link-clear {
+    text-decoration: none;
+    color: #333;
+}
+
+.welcome-description {
     margin-top: 30px;
-  }
+    font-size: 16px;
+    width: 85%;
+}
+
+@media (max-width: 767px) {
+    .welcome-description {
+        width: 80%;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        margin-top: 30px;
+    }
 }
 
 .section-space {
-  margin-top: 60px;
+    margin-top: 60px;
 }
 
 #section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 20px;
 }
 
 /* SVG Classes */
 #svg-container {
-  padding-left: 0px;
-  padding-right: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
 }
 
 @media (max-width: 767px) {
-  #svg-container {
-    display: none;
-  }
+    #svg-container {
+        display: none;
+    }
 }
 
 #zcee-picture {
-  width: 580px;
-  display: block;
-  margin: 0 auto;
+    width: 580px;
+    display: block;
+    margin: 0 auto;
 }
 
 .base-shadow {
-  display: block;
+    display: block;
 }
 
 .ibm-footer {
-  text-align: center;
-  margin-top: 60px;
+    text-align: center;
+    margin-top: 60px;
 }
 
 @media (max-width: 767px) {
-  .ibm-footer {
-    margin-top: 10px;
-  }
+    .ibm-footer {
+        margin-top: 10px;
+    }
 }
 
 .test {
-  border: 1px solid #D2D2D2;
-  background-color: #EBEBEB;
-  text-align: center;
-  padding: 20px;
+    border: 1px solid #D2D2D2;
+    background-color: #EBEBEB;
+    text-align: center;
+    padding: 20px;
 }
 
 /* SVG Animation */
 .float-zcee {
-  animation: 1.5s float alternate infinite;
+    animation: 1.5s float alternate infinite;
 }
 
 @media (max-width: 991px) {
-  .float-zcee {
-    animation: none;
-  }
+    .float-zcee {
+        animation: none;
+    }
 }
 
 @keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(7px);
-  }
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(7px);
+    }
 }

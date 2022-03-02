@@ -5,97 +5,151 @@ TODO: target="_blank" for the repository URLs - open repos in a new window
 <html lang="en">
 
 <head>
-
-  <!-- Latest compiled and minified CSS 05-07-2017 -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <!-- Optional theme 05-07-2017 -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  <link href="stylesheets/custom.css" rel="stylesheet">
-  <title>z/OS Connect Enterprise Edition on GitHub</title>
+    <!-- Latest compiled and minified CSS 05-07-2017 -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
+    <!-- Optional theme 05-07-2017 -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+    <link href="stylesheets/custom.css" rel="stylesheet">
+    <title>z/OS Connect Enterprise Edition on GitHub</title>
 </head>
 
 <body id="body-text">
 
-  <div class="container">
-    <div class="row header">
+    <div class="page-container">
 
-      <div class="col-md-5 col-sm-6 center-header">
-        <img id="zcee-logo" src="imgs/zos-connect-ee-logo.png" />
-        <h4 id="zcee-title"><b>z/OS Connect</b> Enterprise Edition</h4>
-        <h2 class="welcome-header">Truly RESTful APIs <br/> to and from your mainframe</h2>
-        <p class="welcome-description">Fast-track your experience with z/OS Connect EE by using the samples provided in these repositories.<br/><br/> Want to contribute? Raise an issue to let us know.</p>
-        <div class="zcee-button">
-          <a href="#findoutmore" id="link-clear">Find out more</a>
+        <!-- Banner Section -->
+        <section class="banner-section">
+            <div class="banner-section__information-container">
+                <div class="banner-section__logo-container">
+                    <img class="banner-section__logo" src="./imgs/zcee-app-icon-dark.png" alt="z/OS Connect App Icon">
+                    <p>IBM <span>z/OS Connect</span></p>
+                </div>
+                <div class="banner-section__copy">
+                    <p class="banner-section__tagline">Truly RESTful APIs to and from your mainframe</p>
+                    <p class="banner-section__copy-text">Fast-track your experience with z/OS Connect EE by using the
+                        samples provided in these
+                        repositories.</p>
+                    <p class="banner-section__copy-text">Want to contribute? Raise an issue to let us know.</p>
+                </div>
+                <a href="#find-out-more">
+                    <div class="bx--btn bx--btn--primary bx--btn--lg banner-section__button">
+                        Find out more...
+                    </div>
+                </a>
+            </div>
+            <div class="banner-section__image-container">
+                <img class="banner-section__image" src="./imgs/zcee-github-page-illustration.png"
+                    alt="z/OS Connect illustration">
+            </div>
+        </section>
+
+        <!-- Repo Section -->
+        <section class="repo-section">
+            <p>Repo section</p>
+        </section>
+
+        <section class="designer-section">
+            <p>Designer section</p>
+        </section>
+
+        <section id="find-out-more" class="find-out-section">
+            <p>Find out more section</p>
+        </section>
+
+        <section class="footer-section">
+            <p>Footer section</p>
+        </section>
+
+    </div>
+
+    <div class="container">
+        <div class="row header">
+
+            <div class="col-md-5 col-sm-6 center-header">
+                <img id="zcee-logo" src="imgs/zos-connect-ee-logo.png" />
+                <h4 id="zcee-title"><b>z/OS Connect</b> Enterprise Edition</h4>
+                <h2 class="welcome-header">Truly RESTful APIs <br /> to and from your mainframe</h2>
+                <p class="welcome-description">Fast-track your experience with z/OS Connect EE by using the samples
+                    provided in these repositories.<br /><br /> Want to contribute? Raise an issue to let us know.</p>
+                <div class="zcee-button">
+                    <a href="#findoutmore" id="link-clear">Find out more</a>
+                </div>
+            </div>
+            <div class="col-md-7 col-sm-6" id="svg-container">
+                <img id="zcee-picture" class="float-zcee" src="./imgs/zcee-extension-illustration.svg" />
+            </div>
         </div>
-      </div>
-      <div class="col-md-7 col-sm-6" id="svg-container">
-        <img id="zcee-picture" class="float-zcee" src="./imgs/zcee-extension-illustration.svg" />
-      </div>
-    </div>
-    <div class="row section-space">
-      <h3 id="section-title">Available repositories</h3>
+        <div class="row section-space">
+            <h3 id="section-title">Available repositories</h3>
 
-      <!-- Retrieving repositories -->
-      <div class="container-fluid" id="github-projects" />
+            <!-- Retrieving repositories -->
+            <div class="container-fluid" id="github-projects" />
 
-    </div>
-  </div>
-
-  <div id="findoutmore" class="row section-space">
-    <h3 id="section-title">Here are some more resources you might find useful...</h3>
-
-    <!-- ZCEE developer center -->
-    <div class="col-sm-4">
-      <div class="image-container">
-        <a href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=53f7f9ef-d807-4db9-99ec-d3a45a7fc9f4" target="_blank"><img class="find-out-image" src="imgs/zcee-dev-center.svg"/></a>
-      </div>
-      <a id="link-clear" href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=53f7f9ef-d807-4db9-99ec-d3a45a7fc9f4" target="_blank">
-        <div class="zcee-button find-out-button">
-          Community
         </div>
-      </a>
     </div>
 
-    <!-- ZCEE Videos -->
-    <div class="col-sm-4">
-      <div class="image-container">
-        <a href="https://www.youtube.com/playlist?list=PLezLS0Tuqb-6jwDqataX3b-L2wBGguQ5P" target="_blank"><img class="find-out-image" src="imgs/zcee-videos.svg"/></a>
-      </div>
-      <a id="link-clear" href="https://www.youtube.com/playlist?list=PLezLS0Tuqb-6jwDqataX3b-L2wBGguQ5P" target="_blank">
-        <div class="zcee-button find-out-button">
-          Video introduction
+    <div id="findoutmore" class="row section-space">
+        <h3 id="section-title">Here are some more resources you might find useful...</h3>
+
+        <!-- ZCEE developer center -->
+        <div class="col-sm-4">
+            <div class="image-container">
+                <a href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=53f7f9ef-d807-4db9-99ec-d3a45a7fc9f4"
+                    target="_blank"><img class="find-out-image" src="imgs/zcee-dev-center.svg" /></a>
+            </div>
+            <a id="link-clear"
+                href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=53f7f9ef-d807-4db9-99ec-d3a45a7fc9f4"
+                target="_blank">
+                <div class="zcee-button find-out-button">
+                    Community
+                </div>
+            </a>
         </div>
-      </a>
-    </div>
 
-    <!-- ZCEE Twitter -->
-    <div class="col-sm-4">
-      <div class="image-container">
-        <a href="https://twitter.com/IBMzSystems" target="_blank"><img class="find-out-image" src="imgs/zcee-twitter.svg"/></a>
-      </div>
-      <a id="link-clear" href="https://twitter.com/IBMzSystems" target="_blank">
-        <div class="zcee-button find-out-button">
-          IBM z Systems Twitter
+        <!-- ZCEE Videos -->
+        <div class="col-sm-4">
+            <div class="image-container">
+                <a href="https://www.youtube.com/playlist?list=PLezLS0Tuqb-6jwDqataX3b-L2wBGguQ5P" target="_blank"><img
+                        class="find-out-image" src="imgs/zcee-videos.svg" /></a>
+            </div>
+            <a id="link-clear" href="https://www.youtube.com/playlist?list=PLezLS0Tuqb-6jwDqataX3b-L2wBGguQ5P"
+                target="_blank">
+                <div class="zcee-button find-out-button">
+                    Video introduction
+                </div>
+            </a>
         </div>
-      </a>
+
+        <!-- ZCEE Twitter -->
+        <div class="col-sm-4">
+            <div class="image-container">
+                <a href="https://twitter.com/IBMzSystems" target="_blank"><img class="find-out-image"
+                        src="imgs/zcee-twitter.svg" /></a>
+            </div>
+            <a id="link-clear" href="https://twitter.com/IBMzSystems" target="_blank">
+                <div class="zcee-button find-out-button">
+                    IBM z Systems Twitter
+                </div>
+            </a>
+        </div>
     </div>
-  </div>
-  </div>
+    </div>
 
-  <div class="footer ibm-footer">
-    &copy;IBM&reg; 2017
-  </div>
+    <div class="footer ibm-footer">
+        &copy;IBM&reg; 2017
+    </div>
 
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-  <script src="scripts/git.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+        integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="scripts/git.js" type="text/javascript"></script>
 
-  <!-- loads repositories -->
-  <script type="text/javascript">
-    $(function() {
-      $("#github-projects").loadRepositories("zosconnect");
-    });
-  </script>
+    <!-- loads repositories -->
+    <script type="text/javascript">
+        $(function () {
+            $("#github-projects").loadRepositories("zosconnect");
+        });
+    </script>
 
 </body>
 
