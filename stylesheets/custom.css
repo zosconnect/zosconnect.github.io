@@ -1,4 +1,6 @@
+/*****************************/
 /***** Font declarations *****/
+/*****************************/
 @font-face {
     font-family: "ibm-plex-sans";
     src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff2") format("woff2");
@@ -62,28 +64,37 @@ a {
 
 /* 2022 styles */
 
+/*************************/
 /***** Global styles *****/
+/*************************/
+
 html {
-    font-size: 62.5%; /* set gloabl rem + em to be 1rem = 10px */
-    margin: 0 auto;
+    /* font-size: 62.5%;  */
+    /* set gloabl rem + em to be 1rem = 10px */
+    scroll-behavior: smooth;
 }
 
 .page-container {
-    margin: 0 auto;
-    width: 96rem;
+    /* margin: 0 auto; */
+    /* width: 96rem; */
 }
 
+/**************************/
 /***** Banner section *****/
+/**************************/
 
 .banner-section {
+    margin: 0 auto;
+    width: 60rem;
     display: flex;
     align-items: center;
-    padding: 9.6rem 0;
+    padding: 6rem 0;
 }
 
 .banner-section__information-container {
     width: 50%;
-    font-size: 1.6rem;
+    font-size: 1rem;
+    padding-right: 1rem;
 }
 
 .banner-section__image-container {
@@ -95,16 +106,17 @@ html {
 }
 
 .banner-section__logo {
-    width: 4.8rem;
-    height: 4.8rem;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
 }
 
 .banner-section__logo-container {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1rem;
 }
 
-.banner-section__logo-container p {
-    font-size: 2rem;
+.banner-section__logo-container h1 {
+    font-size: 1.25rem;
 }
 
 .banner-section__logo-container span {
@@ -112,38 +124,100 @@ html {
 }
 
 .banner-section__tagline {
-    font-size: 2.6rem;
-    line-height: 2.6rem;
-    margin-bottom: 1.6rem;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    margin-bottom: 1.25rem;
 }
 
 .banner-section__copy {
-    margin-bottom: 1.6rem;
+    margin-bottom: 1rem;
 }
 
 .banner-section__copy-text {
-    font-size: 1.4rem;
-    line-height: 2rem;
+    font-size: .875rem;
+    line-height: 1.625rem;
 }
 
 .banner-section__copy-text:not(:last-child) {
-    margin-bottom: .8rem;
+    margin-bottom: .5rem;
 }
 
 .banner-section__button {
-    font-size: 1.4rem;
+    font-size: .875rem;
 }
 
 /* banner section media queries */
-@media only screen and (max-width: 9.6rem) { 
+@media only screen and (max-width: 6rem) { 
     
-};
+}
 
 
-
+/********************************/
 /***** Repositories section *****/
+/********************************/
 
+.repo-section {
+    margin: 0 auto;
+    width: 60rem;
+}
+
+/****************************/
 /***** Designer section *****/
+/****************************/
+.designer-section {
+    background: #f3f3f3;
+    padding: 6rem 0;
+}
+
+.designer-section__container {
+    margin: 0 auto;
+    width: 60rem;
+    display: flex;
+    align-items: center;
+}
+
+.designer-section__information-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+
+.designer-section__title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.designer-section__text {
+    font-size: .875rem;
+    line-height: 1.625rem;
+    margin-bottom: 1.5rem;
+}
+
+.designer-section__button-link {
+    width: 200px;
+}
+
+.designer-section__button {
+    font-size: .875rem;
+    margin-bottom: 1.5rem;
+}
+
+.designer-section__link {
+    font-size: .875rem;
+    width: 180px;
+}
+
+.designer-section__image-container {
+    width: 50%;
+}
+
+.designer-section__image {
+    width: 100%;
+}
+
+
 
 /***** find out section *****/
 

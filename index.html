@@ -23,7 +23,7 @@ TODO: target="_blank" for the repository URLs - open repos in a new window
             <div class="banner-section__information-container">
                 <div class="banner-section__logo-container">
                     <img class="banner-section__logo" src="./imgs/zcee-app-icon-dark.png" alt="z/OS Connect App Icon">
-                    <p>IBM <span>z/OS Connect</span></p>
+                    <h1>IBM <span>z/OS Connect</span></h1>
                 </div>
                 <div class="banner-section__copy">
                     <p class="banner-section__tagline">Truly RESTful APIs to and from your mainframe</p>
@@ -32,11 +32,13 @@ TODO: target="_blank" for the repository URLs - open repos in a new window
                         repositories.</p>
                     <p class="banner-section__copy-text">Want to contribute? Raise an issue to let us know.</p>
                 </div>
-                <a href="#find-out-more">
-                    <div class="bx--btn bx--btn--primary bx--btn--lg banner-section__button">
-                        Find out more...
-                    </div>
+
+                <a tabindex="-1" href="#find-out-more">
+                    <button class="bx--btn bx--btn--primary banner-section__button" type="button">
+                        Find out more
+                    </button>
                 </a>
+
             </div>
             <div class="banner-section__image-container">
                 <img class="banner-section__image" src="./imgs/zcee-github-page-illustration.png"
@@ -46,17 +48,58 @@ TODO: target="_blank" for the repository URLs - open repos in a new window
 
         <!-- Repo Section -->
         <section class="repo-section">
-            <p>Repo section</p>
+
+            <!-- OpenAPI 3 repositories -->
+            <div class="repo-container">
+                OpenAPI 3
+            </div>
+
+            <!-- OpenAPI 2 repositories -->
+            <div class="repo-container">
+                OpenAPI 3
+            </div>
+
         </section>
 
+        <!-- Designer Section -->
         <section class="designer-section">
-            <p>Designer section</p>
+
+            <div class="designer-section__container">
+                <div class="designer-section__information-container">
+                    <h2 class="designer-section__title">z/OS Connect Designer</h2>
+                    <p class="designer-section__text">The z/OS Connect Designer is a no-code tool which makes building
+                        APIs for your z/OS appllications
+                        and data easier than ever before. Try the new tooling for free today!</p>
+
+                    <a class="designer-section__button-link" tabindex="-1" href="https://ibm.com" target="_blank">
+                        <button class="bx--btn bx--btn--primary designer-section__button" type="button">
+                            Download for free
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" class="bx--btn__icon" width="16"
+                                height="16" style="enable-background:new 0 0 16 16" xml:space="preserve">
+                                <path d="m9.3 3.7 3.8 3.8H1v1h12.1l-3.8 3.8.7.7 5-5-5-5z" />
+                                <path style="fill:none" d="M0 0h16v16H0z" />
+                            </svg>
+                        </button>
+                    </a>
+
+                    <a class="bx--link designer-section__link" href="https://ibm.com" target="_blank">
+                        Read the documentation
+                    </a>
+                </div>
+
+                <div class="designer-section__image-container">
+                    <img class="designer-section__image" src="./imgs/zcee-designer.png" alt="The z/OS Connect Designer">
+                </div>
+            </div>
+
         </section>
 
+        <!-- Find Out More Section -->
         <section id="find-out-more" class="find-out-section">
             <p>Find out more section</p>
         </section>
 
+        <!-- Footer Section -->
         <section class="footer-section">
             <p>Footer section</p>
         </section>
@@ -144,12 +187,12 @@ TODO: target="_blank" for the repository URLs - open repos in a new window
         integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
     <script src="scripts/git.js" type="text/javascript"></script>
 
-    <!-- loads repositories -->
-    <script type="text/javascript">
+    <!-- loads repositories and place them in DOM -->
+    <!-- <script type="text/javascript">
         $(function () {
             $("#github-projects").loadRepositories("zosconnect");
         });
-    </script>
+    </script> -->
 
 </body>
 
