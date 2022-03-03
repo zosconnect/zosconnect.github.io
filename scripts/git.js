@@ -13,9 +13,12 @@ jQuery.fn.loadRepositories = function (username) {
         var meta = data.meta;
         var repos = data.data; // JSON Parsing
 
+        console.log(meta.status);
+
         target.empty();
         if (meta.status == 200) {
 
+            repoSection.innerHTML = ''; //clear the repo section
             populateOasSections();
 
             var oas3repoDOM = document.getElementById('oas3-repos'); //get DOM element for OAS3 repos
@@ -27,11 +30,32 @@ jQuery.fn.loadRepositories = function (username) {
             populateRepoContainer(specArr.oas2repos, oas2repoDOM); // populate oas3repos in DOM
 
         } else {
-            target.append($('<div class="alert alert-danger alert-box">')
-                .append($('<p class="alert-text">')
-                    .append('Unable to retrieve repositories. <b>Please click ')
-                    .append($('<a href="http://github.com/zosconnect">')
-                        .append('here.</b>'))));
+            repoSection.innerHTML = '';
+
+            var notificationTemplate = `<div
+                class="bx--inline-notification bx--inline-notification--warning bx--inline-notification--low-contrast repo-section__notification">
+                <div class="bx--inline-notification__details">
+                    <svg focusable="false" preserveAspectRatio="xMidYMid meet" style="will-change: transform;"
+                        xmlns="http://www.w3.org/2000/svg" class="bx--inline-notification__icon" width="20" height="20"
+                        viewBox="0 0 20 20" aria-hidden="true">
+                        <path
+                            d="M10,1c-5,0-9,4-9,9s4,9,9,9s9-4,9-9S15,1,10,1z M9.2,5h1.5v7H9.2V5z M10,16c-0.6,0-1-0.4-1-1s0.4-1,1-1	s1,0.4,1,1S10.6,16,10,16z">
+                        </path>
+                        <path d="M9.2,5h1.5v7H9.2V5z M10,16c-0.6,0-1-0.4-1-1s0.4-1,1-1s1,0.4,1,1S10.6,16,10,16z"
+                            data-icon-path="inner-path" opacity="0"></path>
+                    </svg>
+                    <div class="bx--inline-notification__text-wrapper">
+                        <p class="bx--inline-notification__title">Unable to retrieve repositories</p>
+                        <p class="bx--inline-notification__subtitle">No problem though, follow the link.</p>
+                    </div>
+                </div>
+                <a href="https://github.com/zosconnect" style="margin-right: 1rem;">
+                    <button tabindex="0"
+                        class="bx--inline-notification__action-button bx--btn bx--btn--sm bx--btn--ghost"
+                        type="button">Please click here</button>
+                </a>
+            </div>`
+            repoSection.insertAdjacentHTML('beforeend', notificationTemplate);
         }
     });
 
