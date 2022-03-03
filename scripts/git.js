@@ -3,6 +3,8 @@ jQuery.githubUser = function (username, callback) {
 };
 
 jQuery.fn.loadRepositories = function (username) {
+
+    var repoSection = document.getElementById('repo-section');
     
     this.html("<div class='query-class'><span>Querying GitHub for " + username + "'s repositories...</span></div>");
 
@@ -13,35 +15,17 @@ jQuery.fn.loadRepositories = function (username) {
 
         target.empty();
         if (meta.status == 200) {
-            sortByName(repos);
-            var chunkedRepos = chunk(repos, 3);
-            $(chunkedRepos).each(function () {
-                var row = $('<div class="row-eq-height">');
-                $.each(this, function () {
-                    // create the elements for each repository found
-                    var repo = this;
-                    var column = $('<div class="col-md-4 col-sm-6">');
-                    var panel = $('<div class="panel clickable">');
-                    var heading = $('<div class="panel-heading">');
-                    column.append(panel);
-                    panel.append(heading);
-                    heading.append($('<div class="panel-image">')
-                        .append($('<img src="imgs/repo-box.svg"/>')));
-                    heading.append($('<div class="panel-title">')
-                        .append($('<a class="no-style" href="' + this.html_url + '" target="_blank">')
-                            .append($('<h3 class="panel-title-name">')
-                                .append(this.name))));
-                    panel.append($('<div class="panel-body">').append(this.description));
 
-                    $(panel).click(function (e) {
-                        e.preventDefault();
-                        window.open(repo.html_url);
-                    });
+            populateOasSections();
 
-                    row.append(column);
-                });
-                target.append(row);
-            });
+            var oas3repoDOM = document.getElementById('oas3-repos'); //get DOM element for OAS3 repos
+            var oas2repoDOM = document.getElementById('oas2-repos'); //get DOM element for OAS3 repos
+
+            var specArr = splitReposBySpec(repos); //split repos by spec
+            populateRepoContainer(specArr.oas3repos, oas3repoDOM); // populate oas3repos in DOM
+            sortByName(specArr.oas2repos);
+            populateRepoContainer(specArr.oas2repos, oas2repoDOM); // populate oas3repos in DOM
+
         } else {
             target.append($('<div class="alert alert-danger alert-box">')
                 .append($('<p class="alert-text">')
@@ -51,19 +35,77 @@ jQuery.fn.loadRepositories = function (username) {
         }
     });
 
-    //function to sort repositories by name
+    function populateOasSections() {
+        var template = `<!-- OpenAPI 3 repositories -->
+        <div class="repo-section__container">
+            <h2 class="repo-section__title">OpenAPI 3 repositories</h2>
+            <div id="oas3-repos" class="repo-section__repositories-container">
+            </div>
+        </div>
+        <!-- OpenAPI 2 repositories -->
+        <div class="repo-section__container">
+            <h2 class="repo-section__title">OpenAPI 2 repositories</h2>
+            <div id="oas2-repos" class="repo-section__repositories-container">
+            </div>
+        </div>`;
+        repoSection.insertAdjacentHTML('beforeend', template);
+    }
+
+    // function to create the container for OAS3 repos
+    function populateRepoContainer(arr, DOMElement) {
+        var StringArr = [];
+        arr.forEach(function(repo) {
+            var repo = `<a href="${repo.html_url}" target="_blank" class="repo-section__repo">
+                <div class="repo-section__information">
+                    <div class="repo-section__repo-git-icon">
+                        <img src="./imgs/logo--github.svg" alt="GitHub Icon">
+                    </div>
+                    <div class="repo-section__repo-name">
+                        ${repo.name}
+                    </div>
+                    <div class="repo-section__repo-description">
+                    ${repo.description}
+                    </div>
+                </div>
+
+                <div class="repo-section__repo-launch-icon">
+                    <img src="./imgs/arrow--up-right.svg" alt="Launch Repo">
+                </div>
+            </a>`;
+            StringArr.push(repo);
+        });
+        // console.log(StringArr);
+        DOMElement.insertAdjacentHTML('beforeend', StringArr.join(""));
+    }
+
+    // function to sort repos by oas3 or oas2 support sample
+    function splitReposBySpec(repositories) {
+        var oas3repos = []; //declare empty oas3 repos array
+        var oas2repos = []; //declare empty oas2 repos array
+
+        //iterate over repos array and remove oas3 entries into another array
+        repositories.forEach(function(repo) {
+            // console.log(repo); //print to console
+
+            if(repo.id === 429458443) { // Db2 sample unique ID = 429458443
+                oas3repos.push(repo); //remove openapi 3 repos from the array received
+                return;
+            }
+            oas2repos.push(repo);
+            return;
+        });
+
+        return {
+            oas3repos: oas3repos, //return array without oas3 project
+            oas2repos: oas2repos //return array with oas2 repos sorted by name
+        };
+    }
+
+    //function to sort repositories alphabetrically
     function sortByName(repos) {
         repos.sort(function (a, b) {
             return a.name - b.name;
         });
     }
 
-    // function to return repositories into an arrays containing arrays of 3 repositories
-    function chunk(arr, size) {
-        var newArr = [];
-        for (var i = 0; i < arr.length; i += size) {
-            newArr.push(arr.slice(i, i + size));
-        }
-        return newArr;
-    }
 };

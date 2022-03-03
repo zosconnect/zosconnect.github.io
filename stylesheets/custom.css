@@ -36,7 +36,9 @@
     font-style: normal;
 }
 
+/***********************/
 /***** Style reset *****/
+/***********************/
 html,
 body,
 div,
@@ -69,14 +71,7 @@ a {
 /*************************/
 
 html {
-    /* font-size: 62.5%;  */
-    /* set gloabl rem + em to be 1rem = 10px */
     scroll-behavior: smooth;
-}
-
-.page-container {
-    /* margin: 0 auto; */
-    /* width: 96rem; */
 }
 
 /**************************/
@@ -159,6 +154,63 @@ html {
 .repo-section {
     margin: 0 auto;
     width: 60rem;
+    padding: 2rem 0;
+}
+
+.repo-section__container {
+    margin-bottom: 6rem;
+}
+
+.repo-section__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.repo-section__repositories-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+
+.repo-section__repo {
+    background: #F4F4F4;
+    padding: 1rem;
+    height: 11.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .2s ease-in-out;
+}
+
+.repo-section__repo:hover {
+    background: #E5E5E5;
+}
+
+.repo-section__repo-git-icon {
+    margin-bottom: .5rem;
+}
+.repo-section__repo-git-icon img {
+    width: 2rem;
+    height: 2rem;
+}
+
+.repo-section__repo-name {
+    color: #161616;
+    font-size: .875rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.repo-section__repo-description {
+    color: #161616;
+    font-size: .875rem;
+}
+
+.repo-section__repo-launch-icon {
+    align-self: flex-end;
+}
+.repo-section__repo-launch-icon img {
+    width: 1rem;
+    height: 1rem;
 }
 
 /****************************/
@@ -218,16 +270,106 @@ html {
 }
 
 
-
+/****************************/
 /***** find out section *****/
+/****************************/
 
+.find-out-section {
+    background: #000;
+    padding: 6rem 0;
+}
+
+.find-out-section__container {
+    width: 60rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.find-out-section__title {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    margin-bottom: 2rem;
+}
+
+.find-out-section__link-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+
+.find-out-section__link {
+    background: #262626;
+    height: 6rem;
+}
+
+.find-out-section__link-border {
+    height: 6rem;
+    background: #262626;
+    padding: 2px;
+    transition: all .2s ease-in-out;
+}
+
+.find-out-section__link-content-container {
+    height: 5.75rem;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    background: #262626;
+}
+
+.find-out-section__link:hover .find-out-section__link-border--green {
+    background: linear-gradient(to right, #6FDC8C, #009D9A);
+}
+.find-out-section__link:hover .find-out-section__link-border--blue {
+    background: linear-gradient(to right, #3DDBD9, #4589FF);
+}
+.find-out-section__link:hover .find-out-section__link-border--pink {
+    background: linear-gradient(to right, #EE538B, #A66EFA);
+}
+
+.find-out-section__link-icon {
+    margin-right: 1.5rem;
+}
+
+.find-out-section__link-icon svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.find-out-section__link-icon img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.find-out-section__link-text {
+    color: #fff;
+}
+
+/**************************/
 /***** Footer section *****/
+/**************************/
 
+.footer-section {
+    background: #000;
+    padding: 1rem 0;
+}
 
+.footer-section__container {
+    width: 60rem;
+    margin: 0 auto;
+}
 
+.footer-section__container p {
+    font-size: .875rem;
+    color: #fff;
+}
+
+/*==================================================*/
+/* 2022 styles */
 
 /*/ Page Classes /*/
-.clickable {
+/* .clickable {
     cursor: pointer;
 }
 
@@ -242,7 +384,6 @@ html {
 .panel:hover {
     box-shadow: 0 5px 8px 3px rgba(0, 0, 0, 0.2);
     -webkit-transition: 0.5s;
-    /* Safari */
     transition: 0.5s;
 }
 
@@ -375,7 +516,6 @@ html {
     background: #fe8500;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     -webkit-transition: 0.5s;
-    /* Safari */
     transition: 0.5s;
     cursor: pointer;
 }
@@ -437,7 +577,6 @@ html {
     font-size: 20px;
 }
 
-/* SVG Classes */
 #svg-container {
     padding-left: 0px;
     padding-right: 0px;
@@ -477,7 +616,6 @@ html {
     padding: 20px;
 }
 
-/* SVG Animation */
 .float-zcee {
     animation: 1.5s float alternate infinite;
 }
@@ -496,4 +634,4 @@ html {
     100% {
         transform: translateY(7px);
     }
-}
+} */
