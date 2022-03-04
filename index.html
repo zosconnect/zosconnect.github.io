@@ -5,6 +5,7 @@ TODO: Transition on the find out more buttons
 TODO: Add CICS to the list of OAS3 Repos that are loaded
 TODO: Add our content solutions page: https://www.ibm.com/support/z-content-solutions/zos-connect/
 TODO: Ensure all links to content go to the correct places.
+TODO: Empty description fields return as null - need to remove this
 
 -->
 
@@ -73,9 +74,9 @@ TODO: Ensure all links to content go to the correct places.
             <div class="designer-section__container">
                 <div class="designer-section__information-container">
                     <h2 class="designer-section__title">z/OS Connect Designer</h2>
-                    <p class="designer-section__text">The z/OS Connect Designer is a no-code tool which makes building
-                        APIs for your z/OS applications
-                        and data easier than ever before. Try the new tooling for free today!</p>
+                    <p class="designer-section__text">The z/OS Connect Designer is a no-code tool that makes building
+                        APIs for your z/OS applications and data easier than ever before. Try the new tooling for free
+                        today!</p>
 
                     <a class="designer-section__button-link" tabindex="-1" href="https://ibm.com" target="_blank">
                         <button class="bx--btn bx--btn--primary designer-section__button" type="button">
@@ -134,14 +135,15 @@ TODO: Ensure all links to content go to the correct places.
                         </div>
                     </a>
 
-                    <a href="#" target="_blank" class="find-out-section__link">
-                        <div class="find-out-section__link-border find-out-section__link-border--blue">
+                    <a href="https://www.ibm.com/support/z-content-solutions/zos-connect/" target="_blank"
+                        class="find-out-section__link">
+                        <div class="find-out-section__link-border find-out-section__link-border--pink">
                             <div class="find-out-section__link-content-container">
                                 <div class="find-out-section__link-icon">
-                                    <img src="./imgs/documentation.svg" alt="IBM z/OS Connect Documentation">
+                                    <img src="./imgs/zos-connect-pink.svg" alt="z/OS Connect API tutorial">
                                 </div>
                                 <div class="find-out-section__link-text">
-                                    <p>IBM z/OS Connect Documentation</p>
+                                    <p>Learn more with the z/OS Connect content solutions page</p>
                                 </div>
                             </div>
                         </div>
@@ -156,6 +158,19 @@ TODO: Ensure all links to content go to the correct places.
                                 </div>
                                 <div class="find-out-section__link-text">
                                     <p>Join the z/OS Connect Community</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="#" target="_blank" class="find-out-section__link">
+                        <div class="find-out-section__link-border find-out-section__link-border--blue">
+                            <div class="find-out-section__link-content-container">
+                                <div class="find-out-section__link-icon">
+                                    <img src="./imgs/documentation.svg" alt="IBM z/OS Connect Documentation">
+                                </div>
+                                <div class="find-out-section__link-text">
+                                    <p>IBM z/OS Connect Documentation</p>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +205,8 @@ TODO: Ensure all links to content go to the correct places.
                                     <img src="./imgs/ibm-z.svg" alt="IBM Z Icon">
                                 </div>
                                 <div class="find-out-section__link-text">
-                                    <p>Explore IBM Z content solution pages to find out what’s available on IBM Z</p>
+                                    <p>Explore IBM Z content solution pages to find out what&apos;s available on IBM Z
+                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -202,7 +218,7 @@ TODO: Ensure all links to content go to the correct places.
         <!-- Footer Section -->
         <section class="footer-section">
             <div class="footer-section__container">
-                <p>©IBM® 2022</p>
+                <p>&copy;IBM&reg; 2022</p>
             </div>
         </section>
 
