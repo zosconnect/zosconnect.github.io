@@ -13,8 +13,6 @@ jQuery.fn.loadRepositories = function (username) {
         var meta = data.meta;
         var repos = data.data; // JSON Parsing
 
-        console.log(meta.status);
-
         target.empty();
         if (meta.status == 200) {
 
@@ -88,7 +86,7 @@ jQuery.fn.loadRepositories = function (username) {
                         ${repo.name}
                     </div>
                     <div class="repo-section__repo-description">
-                    ${repo.description}
+                        ${displayDescription(repo.description)}
                     </div>
                 </div>
 
@@ -100,6 +98,13 @@ jQuery.fn.loadRepositories = function (username) {
         });
         // console.log(StringArr);
         DOMElement.insertAdjacentHTML('beforeend', StringArr.join(""));
+    }
+
+    function displayDescription(description) {
+        if(description === null) {
+            return '';
+        }
+        return description;
     }
 
     // function to sort repos by oas3 or oas2 support sample
