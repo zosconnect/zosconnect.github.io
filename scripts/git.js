@@ -116,7 +116,7 @@ jQuery.fn.loadRepositories = function (username) {
         repositories.forEach(function(repo) {
             // console.log(repo); //print to console
 
-            if(repo.id === 429458443) { // Db2 sample unique ID = 429458443
+            if(repo.id === 429458443 || repo.id === 465738025) { // Db2 sample unique ID = 429458443
                 oas3repos.push(repo); //remove openapi 3 repos from the array received
                 return;
             }
