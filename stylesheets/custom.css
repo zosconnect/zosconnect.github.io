@@ -1,321 +1,479 @@
-/*/ Font declarations /*/
+/*****************************/
+/***** Font declarations *****/
+/*****************************/
 @font-face {
-  font-family: "ibm-plex-sans";
-  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff2") format("woff2");
-  font-weight: 300;
-  font-style: normal;
+    font-family: "ibm-plex-sans";
+    src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-light.woff2") format("woff2");
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "ibm-plex-sans";
-  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regular.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regular.woff2") format("woff2");
-  font-weight: 400;
-  font-style: normal;
+    font-family: "ibm-plex-sans";
+    src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regular.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-regular.woff2") format("woff2");
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "ibm-plex-sans";
-  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-medium.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-medium.woff2") format("woff2");
-  font-weight: 500;
-  font-style: normal;
+    font-family: "ibm-plex-sans";
+    src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-medium.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-medium.woff2") format("woff2");
+    font-weight: 500;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "ibm-plex-sans";
-  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibold.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibold.woff2") format("woff2");
-  font-weight: 600;
-  font-style: normal;
+    font-family: "ibm-plex-sans";
+    src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibold.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-semibold.woff2") format("woff2");
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
-  font-family: "ibm-plex-sans";
-  src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-bold.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-bold.woff2") format("woff2");
-  font-weight: 700;
-  font-style: normal;
+    font-family: "ibm-plex-sans";
+    src: url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-bold.woff") format("woff"), url("https://1.www.s81c.com/common/fonts/plex/v1/ibmplexsans-bold.woff2") format("woff2");
+    font-weight: 700;
+    font-style: normal;
 }
 
-/*/ Style Reset /*/
-html, body, div, main, nav, aside, h1, h2, h3, h4, h5, h6, p, ul, ol, li, a {
-  margin: 0px;
-  padding: 0px;
+/***********************/
+/***** Style reset *****/
+/***********************/
+html,
+body,
+div,
+main,
+nav,
+aside,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+a {
+    margin: 0px;
+    padding: 0px;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
-/*/ Page Classes /*/
-.clickable {
-  cursor: pointer;
-}
+/* 2022 styles */
 
-.panel {
-  background: #ffffff;
-  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  padding: 10px;
-  height: 250px;
-}
-
-.panel:hover {
-  box-shadow: 0 5px 8px 3px rgba(0, 0, 0, 0.2);
-  -webkit-transition: 0.5s;
-  /* Safari */
-  transition: 0.5s;
-}
-
-.no-style {
-  text-decoration: none;
-}
-
-.no-style:hover {
-  text-decoration: none;
-}
-
-.alert-text {
-  text-align: center;
-}
-
-.alert-box {
-  margin: 0 auto;
-  display: block;
-  padding: 20px 0;
-  width: 80%;
-}
-
-@media (max-width: 540px) {
-  .alert-box {
-    width: 100%;
-  }
-}
-
-.query-class {
-  text-align: center;
-}
-
-.panel-heading {
-  background-image: none;
-  padding: 10px;
-}
-
-.panel-title {
-  text-decoration: none;
-  display: inline-block;
-}
-
-.panel-title-name {
-  font-size: 16px;
-  margin-left: 30px;
-}
-
-.panel-image {
-  width: 20px;
-  display: inline-block;
-  margin-right: 10px;
-  position: absolute;
-}
-
-.panel-body {
-  font-size: 16px;
-}
+/*************************/
+/***** Global styles *****/
+/*************************/
 
 html {
-  padding-top: 60px;
-  padding-bottom: 60px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
-#body-text {
-  font-family: "ibm-plex-sans";
-}
+/**************************/
+/***** Banner section *****/
+/**************************/
 
-#zcee-logo {
-  width: 40px;
-  display: inline-block;
-  margin-right: 10px;
-  vertical-align: middle;
-}
-
-@media (max-width: 767px) {
-  #zcee-logo {
-    display: block;
+.banner-section {
     margin: 0 auto;
-    margin-bottom: 10px;
-  }
+    width: 60rem;
+    display: flex;
+    align-items: center;
+    padding: 6rem 0;
+}
+@media only screen and (max-width: 62.5rem) { 
+    .banner-section {
+        padding: 6rem 2rem;
+    }
+}
+@media only screen and (max-width: 47.5rem) { 
+    .banner-section {
+        width: 100%;
+    }
 }
 
-#zcee-title {
-  display: inline-block;
+.banner-section__information-container {
+    width: 50%;
+    font-size: 1rem;
+    padding-right: 1rem;
+}
+@media only screen and (max-width: 47.5rem) { 
+    .banner-section__information-container {
+        padding-right: 0;
+        width: 80%;
+    }
+}
+@media only screen and (max-width: 31.25rem) { 
+    .banner-section__information-container {
+        width: 100%;
+    }
 }
 
-@media (max-width: 767px) {
-  #zcee-title {
-    display: block;
-    text-align: center;
-  }
+.banner-section__image-container {
+    width: 50%; 
+}
+@media only screen and (max-width: 47.5rem) { 
+    .banner-section__image-container {
+        display: none;
+    }
 }
 
-.center-header {
-  padding-top: 80px;
-}
-
-@media (max-width: 767px) {
-  .center-header {
-    padding-top: 0px;
-  }
-}
-
-.welcome-header {
-  margin-top: 30px;
-}
-
-@media (max-width: 767px) {
-  .welcome-header {
+.banner-section__image {
     width: 100%;
-    text-align: center;
-  }
+}
+@media only screen and (max-width: 47.5rem) { 
+    .banner-section__image {
+        display: none;
+    }
 }
 
-.zcee-button {
-  border: 1px solid #d0d0d0;
-  border-radius: 100px;
-  padding: 10px 20px;
-  margin-top: 30px;
-  width: 175px;
-  font-size: 16px;
-  text-align: center;
+.banner-section__logo {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
 }
 
-@media (max-width: 767px) {
-  .zcee-button {
-    display: block;
+.banner-section__logo-container {
+    margin-bottom: 1rem;
+}
+
+.banner-section__logo-container h1 {
+    font-size: 1.25rem;
+}
+
+.banner-section__logo-container span {
+    font-weight: 600;
+}
+
+.banner-section__tagline {
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    margin-bottom: 1.25rem;
+}
+
+.banner-section__copy {
+    margin-bottom: 1rem;
+}
+
+.banner-section__copy-text {
+    font-size: .875rem;
+    line-height: 1.625rem;
+}
+
+.banner-section__copy-text:not(:last-child) {
+    margin-bottom: .5rem;
+}
+
+.banner-section__button {
+    font-size: .875rem;
+}
+
+@media only screen and (max-width: 6rem) { 
+    
+}
+
+
+/********************************/
+/***** Repositories section *****/
+/********************************/
+
+.repo-section {
     margin: 0 auto;
-    text-align: center;
-    margin-top: 30px;
-  }
+    width: 60rem;
+    padding: 2rem 0;
+}
+@media only screen and (max-width: 62.5rem) { 
+    .repo-section {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
 }
 
-.zcee-button:hover {
-  background: #fe8500;
-  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-  -webkit-transition: 0.5s;
-  /* Safari */
-  transition: 0.5s;
-  cursor: pointer;
+.repo-section__container {
+    margin-bottom: 6rem;
 }
 
-.find-out-button {
-  display: block;
-  margin: 0 auto;
-  text-align: center;
-  margin-top: 40px;
+.repo-section__title {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 
-@media (max-width: 767px) {
-  .find-out-button {
-    margin-bottom: 40px;
-    font-size: 16px;
-  }
+.repo-section__repositories-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+}
+@media only screen and (max-width: 60rem) { 
+    .repo-section__repositories-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 43.75rem) { 
+    .repo-section__repositories-container {
+        grid-template-columns: 1fr;
+    }
 }
 
-.find-out-image {
-  width: 80%;
-  margin: 0 auto;
-  display: block;
+.repo-section__repo {
+    background: #F4F4F4;
+    padding: 1rem;
+    height: 11.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all .2s ease-in-out;
 }
 
-@media (max-width: 767px) {
-  .find-out-image {
-    width: 260px;
-  }
+.repo-section__repo:hover {
+    background: #E5E5E5;
 }
 
-#link-clear {
-  text-decoration: none;
-  color: #333;
+.repo-section__repo-git-icon {
+    margin-bottom: .5rem;
+}
+.repo-section__repo-git-icon img {
+    width: 2rem;
+    height: 2rem;
 }
 
-.welcome-description {
-  margin-top: 30px;
-  font-size: 16px;
-  width: 85%;
+.repo-section__repo-name {
+    color: #161616;
+    font-size: .875rem;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+.repo-section__repo-description {
+    color: #161616;
+    font-size: .875rem;
 }
 
-@media (max-width: 767px) {
-  .welcome-description {
-    width: 80%;
+.repo-section__repo-launch-icon {
+    align-self: flex-end;
+}
+.repo-section__repo-launch-icon img {
+    width: 1rem;
+    height: 1rem;
+}
+
+.repo-section__notification {
+    width: 100%;
+}
+
+/* style overrides */
+.bx--inline-notification {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+/****************************/
+/***** Designer section *****/
+/****************************/
+.designer-section {
+    background: #f3f3f3;
+    padding: 6rem 0;
+}
+@media only screen and (max-width: 62.5rem) { 
+    .designer-section {
+        padding: 6rem 2rem;
+    }
+}
+
+.designer-section__container {
     margin: 0 auto;
-    display: block;
-    text-align: center;
-    margin-top: 30px;
-  }
+    width: 60rem;
+    display: flex;
+    align-items: center;
+}
+@media only screen and (max-width: 62.5rem) { 
+    .designer-section__container {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
 }
 
-.section-space {
-  margin-top: 60px;
+.designer-section__information-container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 1rem;
+}
+@media only screen and (max-width: 62.5rem) { 
+    .designer-section__information-container {
+        width: 100%;
+        padding: 0 3rem;
+    }
+}
+@media only screen and (max-width: 38.5rem) { 
+    .designer-section__information-container {
+        padding: 0;
+    }
 }
 
-#section-title {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 20px;
+.designer-section__title {
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
 }
 
-/* SVG Classes */
-#svg-container {
-  padding-left: 0px;
-  padding-right: 0px;
+.designer-section__text {
+    font-size: .875rem;
+    line-height: 1.625rem;
+    margin-bottom: 1.5rem;
 }
 
-@media (max-width: 767px) {
-  #svg-container {
-    display: none;
-  }
+.designer-section__button-link {
+    width: 200px;
 }
 
-#zcee-picture {
-  width: 580px;
-  display: block;
-  margin: 0 auto;
+.designer-section__button {
+    font-size: .875rem;
+    margin-bottom: 1.5rem;
 }
 
-.base-shadow {
-  display: block;
+.designer-section__link {
+    font-size: .875rem;
+    width: 180px;
 }
 
-.ibm-footer {
-  text-align: center;
-  margin-top: 60px;
+.designer-section__image-container {
+    width: 50%;
+}
+@media only screen and (max-width: 62.5rem) { 
+    .designer-section__image-container {
+        width: 80%;
+        margin-bottom: 3rem;
+    }
+}
+@media only screen and (max-width: 38.5rem) { 
+    .designer-section__image-container {
+        width: 100%;
+    }
 }
 
-@media (max-width: 767px) {
-  .ibm-footer {
-    margin-top: 10px;
-  }
+.designer-section__image {
+    width: 100%;
 }
 
-.test {
-  border: 1px solid #D2D2D2;
-  background-color: #EBEBEB;
-  text-align: center;
-  padding: 20px;
+
+/****************************/
+/***** find out section *****/
+/****************************/
+
+.find-out-section {
+    background: #000;
+    padding: 6rem 0;
 }
 
-/* SVG Animation */
-.float-zcee {
-  animation: 1.5s float alternate infinite;
+.find-out-section__container {
+    width: 60rem;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+@media only screen and (max-width: 62.5rem) { 
+    .find-out-section__container {
+        width: 100%;
+        padding: 0 1.5rem;
+    }
 }
 
-@media (max-width: 991px) {
-  .float-zcee {
-    animation: none;
-  }
+.find-out-section__title {
+    color: #fff;
+    font-size: 1.25rem;
+    line-height: 1.625rem;
+    margin-bottom: 2rem;
 }
 
-@keyframes float {
-  0% {
-    transform: translateY(0);
-  }
-  100% {
-    transform: translateY(7px);
-  }
+.find-out-section__link-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+}
+@media only screen and (max-width: 43.75rem) { 
+    .find-out-section__link-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+}
+
+.find-out-section__link {
+    background: #262626;
+    height: 6rem;
+}
+
+.find-out-section__link-border {
+    height: 6rem;
+    background: #262626;
+    padding: 2px;
+    transition: all .2s ease-in-out;
+}
+
+.find-out-section__link-content-container {
+    height: 5.75rem;
+    padding: 1.25rem;
+    display: flex;
+    align-items: center;
+    background: #262626;
+}
+
+.find-out-section__link:hover .find-out-section__link-border--green {
+    background: linear-gradient(to right, #6FDC8C, #009D9A);
+}
+.find-out-section__link:hover .find-out-section__link-border--blue {
+    background: linear-gradient(to right, #3DDBD9, #4589FF);
+}
+.find-out-section__link:hover .find-out-section__link-border--pink {
+    background: linear-gradient(to right, #EE538B, #A66EFA);
+}
+
+.find-out-section__link-icon {
+    margin-right: 1.5rem;
+}
+
+.find-out-section__link-icon svg {
+    width: 3rem;
+    height: 3rem;
+}
+
+.find-out-section__link-icon img {
+    width: 3rem;
+    height: 3rem;
+}
+
+.find-out-section__link-text {
+    color: #fff;
+}
+
+.find-out-section__link-text p {
+    font-size: .875rem;
+}
+
+/**************************/
+/***** Footer section *****/
+/**************************/
+
+.footer-section {
+    background: #000;
+    padding: 1rem 0;
+}
+
+.footer-section__container {
+    width: 60rem;
+    margin: 0 auto;
+}
+@media only screen and (max-width: 62.5rem) { 
+    .footer-section__container {
+        width: 100%;
+        padding: 0 1.25rem;
+    }
+}
+
+.footer-section__container p {
+    font-size: .875rem;
+    color: #fff;
 }

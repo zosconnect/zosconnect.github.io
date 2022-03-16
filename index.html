@@ -1,101 +1,246 @@
 <!--
-TODO: target="_blank" for the repository URLs - open repos in a new window
+
+TODO: Test design and copy with PM
+TODO: Transition on the find out more buttons
+TODO: Add CICS to the list of OAS3 Repos that are loaded
+TODO: Add our content solutions page: https://www.ibm.com/support/z-content-solutions/zos-connect/
+TODO: Ensure all links to content go to the correct places.
+TODO: Empty description fields return as null - need to remove this
+
 -->
 
 <html lang="en">
 
 <head>
-
-  <!-- Latest compiled and minified CSS 05-07-2017 -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <!-- Optional theme 05-07-2017 -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-
-  <link href="stylesheets/custom.css" rel="stylesheet">
-  <title>z/OS Connect Enterprise Edition on GitHub</title>
+    <link rel="stylesheet" href="https://unpkg.com/carbon-components/css/carbon-components.min.css">
+    <link href="stylesheets/custom.css" rel="stylesheet">
+    <title>z/OS Connect Enterprise Edition on GitHub</title>
+    <link rel="icon" type="image/x-icon" href="./imgs/app-icon-monolight-favicon-gray-50.png">
 </head>
 
 <body id="body-text">
 
-  <div class="container">
-    <div class="row header">
+    <div class="page-container">
 
-      <div class="col-md-5 col-sm-6 center-header">
-        <img id="zcee-logo" src="imgs/zos-connect-ee-logo.png" />
-        <h4 id="zcee-title"><b>z/OS Connect</b> Enterprise Edition</h4>
-        <h2 class="welcome-header">Truly RESTful APIs <br/> to and from your mainframe</h2>
-        <p class="welcome-description">Fast-track your experience with z/OS Connect EE by using the samples provided in these repositories.<br/><br/> Want to contribute? Raise an issue to let us know.</p>
-        <div class="zcee-button">
-          <a href="#findoutmore" id="link-clear">Find out more</a>
-        </div>
-      </div>
-      <div class="col-md-7 col-sm-6" id="svg-container">
-        <img id="zcee-picture" class="float-zcee" src="./imgs/zcee-extension-illustration.svg" />
-      </div>
+        <!-- Banner Section -->
+        <section class="banner-section">
+            <div class="banner-section__information-container">
+                <div class="banner-section__logo-container">
+                    <img class="banner-section__logo" src="./imgs/zcee-app-icon-dark.png" alt="z/OS Connect App Icon">
+                    <h1>IBM <span>z/OS Connect</span></h1>
+                </div>
+                <div class="banner-section__copy">
+                    <p class="banner-section__tagline">Truly RESTful APIs to and from your mainframe</p>
+                    <p class="banner-section__copy-text">Fast-track your experience with z/OS Connect by using the
+                        samples provided in these
+                        repositories.</p>
+                    <p class="banner-section__copy-text">Want to contribute? Raise an issue to let us know.</p>
+                </div>
+
+                <a tabindex="-1" href="#find-out-more">
+                    <button class="bx--btn bx--btn--primary banner-section__button" type="button">
+                        Find out more
+                    </button>
+                </a>
+
+            </div>
+            <div class="banner-section__image-container">
+                <img class="banner-section__image" src="./imgs/zcee-github-page-illustration.png"
+                    alt="z/OS Connect illustration">
+            </div>
+        </section>
+
+        <!-- Repo Section -->
+        <section class="repo-section" id="repo-section">
+
+            <!-- Inline loading -->
+            <div data-inline-loading class="bx--inline-loading" role="alert" aria-live="assertive">
+                <div class="bx--inline-loading__animation">
+                    <div style="width:32px;height:32px;" data-inline-loading-spinner
+                        class="bx--loading bx--loading--small">
+                        <svg class="bx--loading__svg" viewBox="-75 -75 150 150">
+                            <circle class="bx--loading__background" cx="0" cy="0" r="26.8125" />
+                            <circle class="bx--loading__stroke" cx="0" cy="0" r="26.8125" />
+                        </svg>
+                    </div>
+                </div>
+                <p data-inline-loading-text-active class="bx--inline-loading__text">Loading repository data...</p>
+            </div>
+        </section>
+
+        <!-- Designer Section -->
+        <section class="designer-section">
+
+            <div class="designer-section__container">
+                <div class="designer-section__information-container">
+                    <h2 class="designer-section__title">z/OS Connect Designer</h2>
+                    <p class="designer-section__text">The z/OS Connect Designer is a no-code tool that makes building
+                        APIs for your z/OS applications and data easier than ever before. Try the new tooling for free
+                        today!</p>
+
+                    <a class="designer-section__button-link" tabindex="-1"
+                        href="https://www.ibm.com/docs/en/cloud-paks/z-modernization-stack/2022.1.1?topic=designer-download-zos-connect-image"
+                        target="_blank">
+                        <button class="bx--btn bx--btn--primary designer-section__button" type="button">
+                            Download for free
+                            <svg focusable="false" xmlns="http://www.w3.org/2000/svg" class="bx--btn__icon" width="16"
+                                height="16" style="enable-background:new 0 0 16 16" xml:space="preserve">
+                                <path d="m9.3 3.7 3.8 3.8H1v1h12.1l-3.8 3.8.7.7 5-5-5-5z" />
+                                <path style="fill:none" d="M0 0h16v16H0z" />
+                            </svg>
+                        </button>
+                    </a>
+
+                    <a class="bx--link designer-section__link"
+                        href="https://www.ibm.com/docs/en/cloud-paks/z-modernization-stack/2022.1.1?topic=connect-welcome"
+                        target="_blank">
+                        Read the documentation
+                    </a>
+                </div>
+
+                <div class="designer-section__image-container">
+                    <img class="designer-section__image" src="./imgs/zcee-designer.png" alt="The z/OS Connect Designer">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Find Out More Section -->
+        <section id="find-out-more" class="find-out-section">
+
+            <div class="find-out-section__container">
+                <h2 class="find-out-section__title">Find out more about IBM z/OS Connect</h2>
+
+                <div class="find-out-section__link-container">
+
+                    <a href="https://www.ibm.com/docs/en/cloud-paks/z-modernization-stack/2022.1.1?topic=tutorials-creating-cics-zos-connect-api"
+                        target="_blank" class="find-out-section__link">
+                        <div class="find-out-section__link-border find-out-section__link-border--green">
+                            <div class="find-out-section__link-content-container">
+                                <div class="find-out-section__link-icon">
+                                    <img src="./imgs/api.svg" alt="z/OS Connect API tutorial">
+                                </div>
+                                <div class="find-out-section__link-text">
+                                    <p>Create your first OpenAPI 3 CICS API using the z/OS Connect Designer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.ibm.com/docs/en/cloud-paks/z-modernization-stack/2022.1.1?topic=tutorials-creating-your-first-db2-zos-connect-api"
+                        target="_blank" class="find-out-section__link">
+                        <div class="find-out-section__link-border find-out-section__link-border--green">
+                            <div class="find-out-section__link-content-container">
+                                <div class="find-out-section__link-icon">
+                                    <img src="./imgs/api.svg" alt="z/OS Connect API tutorial">
+                                </div>
+                                <div class="find-out-section__link-text">
+                                    <p>Create your first OpenAPI 3 Db2 API using the z/OS Connect Designer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- <a href="https://www.ibm.com/support/z-content-solutions/zos-connect/" target="_blank"
+                        class="find-out-section__link">
+                        <div class="find-out-section__link-border find-out-section__link-border--pink">
+                            <div class="find-out-section__link-content-container">
+                                <div class="find-out-section__link-icon">
+                                    <img src="./imgs/zos-connect-pink.svg" alt="z/OS Connect API tutorial">
+                                </div>
+                                <div class="find-out-section__link-text">
+                                    <p>Learn more with the z/OS Connect content solutions page</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a> -->
+
+                    <a href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/community-home?communitykey=05a9c234-d770-4c28-b878-b8550562327b"
+                        target="_blank" class="find-out-section__link">
+                        <div class="find-out-section__link-border find-out-section__link-border--pink">
+                            <div class="find-out-section__link-content-container">
+                                <div class="find-out-section__link-icon">
+                                    <img src="./imgs/zcee-community.svg" alt="z/OS Connect community">
+                                </div>
+                                <div class="find-out-section__link-text">
+                                    <p>Join the z/OS Connect Community</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.ibm.com/docs/en/cloud-paks/z-modernization-stack/2022.1.1?topic=connect-welcome"
+                        target="_blank" class="find-out-section__link">
+                        <div class="find-out-section__link-border find-out-section__link-border--blue">
+                            <div class="find-out-section__link-content-container">
+                                <div class="find-out-section__link-icon">
+                                    <img src="./imgs/documentation.svg" alt="IBM z/OS Connect Documentation">
+                                </div>
+                                <div class="find-out-section__link-text">
+                                    <p>IBM z/OS Connect Documentation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="find-out-section__container">
+                <h2 class="find-out-section__title">Find out more about the future of IBM Z</h2>
+
+                <div class="find-out-section__link-container">
+
+                    <a href="https://www.ibm.com/cloud/learn/docker" target="_blank" class="find-out-section__link">
+                        <div class="find-out-section__link-border find-out-section__link-border--blue">
+                            <div class="find-out-section__link-content-container">
+                                <div class="find-out-section__link-icon">
+                                    <img src="./imgs/docker.svg" alt="Docker Icon">
+                                </div>
+                                <div class="find-out-section__link-text">
+                                    <p>IBM Cloud Learn Hub: Docker</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.ibm.com/support/z-content-solutions/" target="_blank"
+                        class="find-out-section__link">
+                        <div class="find-out-section__link-border find-out-section__link-border--blue">
+                            <div class="find-out-section__link-content-container">
+                                <div class="find-out-section__link-icon">
+                                    <img src="./imgs/ibm-z.svg" alt="IBM Z Icon">
+                                </div>
+                                <div class="find-out-section__link-text">
+                                    <p>Explore IBM Z content solution pages to find out what&apos;s available on IBM Z
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer Section -->
+        <section class="footer-section">
+            <div class="footer-section__container">
+                <p>&copy;IBM&reg; 2022</p>
+            </div>
+        </section>
+
     </div>
-    <div class="row section-space">
-      <h3 id="section-title">Available repositories</h3>
 
-      <!-- Retrieving repositories -->
-      <div class="container-fluid" id="github-projects" />
+    <script src="https://code.jquery.com/jquery-3.1.0.min.js"
+        integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    <script src="scripts/git.js" type="text/javascript"></script>
 
-    </div>
-  </div>
-
-  <div id="findoutmore" class="row section-space">
-    <h3 id="section-title">Here are some more resources you might find useful...</h3>
-
-    <!-- ZCEE developer center -->
-    <div class="col-sm-4">
-      <div class="image-container">
-        <a href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=53f7f9ef-d807-4db9-99ec-d3a45a7fc9f4" target="_blank"><img class="find-out-image" src="imgs/zcee-dev-center.svg"/></a>
-      </div>
-      <a id="link-clear" href="https://community.ibm.com/community/user/ibmz-and-linuxone/groups/topic-home?CommunityKey=53f7f9ef-d807-4db9-99ec-d3a45a7fc9f4" target="_blank">
-        <div class="zcee-button find-out-button">
-          Community
-        </div>
-      </a>
-    </div>
-
-    <!-- ZCEE Videos -->
-    <div class="col-sm-4">
-      <div class="image-container">
-        <a href="https://www.youtube.com/playlist?list=PLezLS0Tuqb-6jwDqataX3b-L2wBGguQ5P" target="_blank"><img class="find-out-image" src="imgs/zcee-videos.svg"/></a>
-      </div>
-      <a id="link-clear" href="https://www.youtube.com/playlist?list=PLezLS0Tuqb-6jwDqataX3b-L2wBGguQ5P" target="_blank">
-        <div class="zcee-button find-out-button">
-          Video introduction
-        </div>
-      </a>
-    </div>
-
-    <!-- ZCEE Twitter -->
-    <div class="col-sm-4">
-      <div class="image-container">
-        <a href="https://twitter.com/IBMzSystems" target="_blank"><img class="find-out-image" src="imgs/zcee-twitter.svg"/></a>
-      </div>
-      <a id="link-clear" href="https://twitter.com/IBMzSystems" target="_blank">
-        <div class="zcee-button find-out-button">
-          IBM z Systems Twitter
-        </div>
-      </a>
-    </div>
-  </div>
-  </div>
-
-  <div class="footer ibm-footer">
-    &copy;IBM&reg; 2017
-  </div>
-
-  <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-  <script src="scripts/git.js" type="text/javascript"></script>
-
-  <!-- loads repositories -->
-  <script type="text/javascript">
-    $(function() {
-      $("#github-projects").loadRepositories("zosconnect");
-    });
-  </script>
+    <!-- loads repositories and place them in DOM -->
+    <script type="text/javascript">
+        $(function () {
+            $("#github-projects").loadRepositories("zosconnect");
+        });
+    </script>
 
 </body>
 
