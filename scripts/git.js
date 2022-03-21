@@ -114,7 +114,7 @@ jQuery.fn.loadRepositories = function (username) {
 
         //iterate over repos array and remove oas3 entries into another array
         repositories.forEach(function(repo) {
-            console.log(repo); //print to console
+            // console.log(repo); //print to console
 
             if(repo.id === 429458443 || repo.id === 465738025
                 || repo.id === 419718267 || repo.id === 445501328) { // Db2 sample unique ID = 429458443
