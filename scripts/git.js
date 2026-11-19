@@ -60,13 +60,13 @@ jQuery.fn.loadRepositories = function (username) {
     function populateOasSections() {
         var template = `<!-- OpenAPI 3 repositories -->
         <div class="repo-section__container">
-            <h2 class="repo-section__title">OpenAPI 3 repositories</h2>
+            <h2 class="repo-section__title">OpenAPI 3 repositories (zosConnect-3.0)</h2>
             <div id="oas3-repos" class="repo-section__repositories-container">
             </div>
         </div>
         <!-- OpenAPI 2 repositories -->
         <div class="repo-section__container">
-            <h2 class="repo-section__title">OpenAPI 2 repositories</h2>
+            <h2 class="repo-section__title">OpenAPI 2 repositories (zosConnect-2.0)</h2>
             <div id="oas2-repos" class="repo-section__repositories-container">
             </div>
         </div>`;
