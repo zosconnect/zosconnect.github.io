@@ -60,13 +60,13 @@ jQuery.fn.loadRepositories = function (username) {
     function populateOasSections() {
         var template = `<!-- OpenAPI 3 repositories -->
         <div class="repo-section__container">
-            <h2 class="repo-section__title">OpenAPI 3 repositories (zosConnect-3.0)</h2>
+            <h2 class="repo-section__title">zosConnect-3.0 repositories</h2>
             <div id="oas3-repos" class="repo-section__repositories-container">
             </div>
         </div>
         <!-- OpenAPI 2 repositories -->
         <div class="repo-section__container">
-            <h2 class="repo-section__title">OpenAPI 2 repositories (zosConnect-2.0)</h2>
+            <h2 class="repo-section__title">zosConnect-2.0 repositories</h2>
             <div id="oas2-repos" class="repo-section__repositories-container">
             </div>
         </div>`;
@@ -116,15 +116,22 @@ jQuery.fn.loadRepositories = function (username) {
         repositories.forEach(function(repo) {
             // console.log(repo); //print to console
 
-            if(repo.id === 345628524 || repo.id === 419718267
-                || repo.id === 445501328) {
+            if(repo.id === 345628524 // zosconnect/json4j
+                || repo.id === 419718267 // zosconnect/com.ibm.zosconnect.gradle
+                || repo.id === 445501328 // zosconnect/test-samples
+                || repo.id === 63160436) { // zosconnect/zosconnect.github.io
                 return; //we don't want to display these repos.
             }
 
-            if(repo.id === 429458443 || repo.id === 465738025
-                || repo.id === 562941694 || repo.id === 605596230 
-                || repo.id === 652615243) { // Db2 sample unique ID = 429458443
-                oas3repos.push(repo); //remove openapi 3 repos from the array received
+            if(repo.id === 429458443 // zosconnect/sample-db2-api
+                || repo.id === 465738025 // zosconnect/sample-cics-api
+                || repo.id === 562941694 // zosconnect/sample-ims-api
+                || repo.id === 605596230 // zosconnect/sample-cics-api
+                || repo.id === 652615243 // zosconnect/sample-cics-api-first
+                || repo.id === 1142346838 // zosconnect/sample-fslogger-interceptor
+                || repo.id === 1149633973 // zosconnect/ibm-zcon-zosconnect-operator
+                || repo.id === 1138971426) { // zosconnect/sample-java-api
+                oas3repos.push(repo);
                 return;
             }
             oas2repos.push(repo);
